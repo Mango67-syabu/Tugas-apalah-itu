@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Portfolio</title>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Navbar -->
+    <header class="max-w-6xl mx-auto mt-6">
+        <nav class="bg-white rounded-xl shadow-md px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-blue-600">
+                Ibra<span class="text-gray-800">Portfolio</span>
+            </h1>
+
+            <ul class="flex gap-6 font-medium">
+                <li><a href="#" class="hover:text-blue-600 transition">Home</a></li>
+                <li><a href="#about" class="hover:text-blue-600 transition">About</a></li>
+                <li><a href="#social" class="hover:text-blue-600 transition">Social</a></li>
+                <li><a href="#contact" class="hover:text-blue-600 transition">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <main class="max-w-6xl mx-auto px-6">
+
+        <section class="grid md:grid-cols-2 items-center gap-10 py-16">
+
+            <div>
+                <h2 class="text-5xl font-bold leading-tight">
+                    Hi, I'm <span class="text-blue-600">Ibrahim</span>
+                </h2>
+
+                <p class="mt-6 text-gray-600 leading-8">
+                    Saya seorang pelajar yang sedang belajar Web Development.
+                    Saya suka membuat website sederhana menggunakan HTML,
+                    Tailwind CSS, dan JavaScript.
+                </p>
+
+                <div class="mt-8 flex gap-4">
+                    <a href="#contact"
+                        class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+                        Contact Me
+                    </a>
+
+                    <a href="#about"
+                        class="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition">
+                        About Me
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex justify-center">
+                <img src="/assets/img/SI roy np jir.png"
+                    alt="Profile"
+                    class="w-72 rounded-2xl shadow-xl">
+            </div>
+
+        </section>
+
+        <!-- About -->
+        <section id="about" class="mb-20">
+
+            <h2 class="text-3xl font-bold text-center mb-8">
+                About Me
+            </h2>
+
+            <div class="bg-white rounded-2xl shadow-md p-8">
+                <p class="text-gray-600 leading-8">
+                    Saya memiliki minat di bidang Web Development.
+                    Saat ini saya sedang mempelajari HTML, CSS,
+                    Tailwind CSS, JavaScript, dan PHP.
+                    Saya senang membuat tampilan website yang sederhana,
+                    bersih, dan nyaman digunakan.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- Social -->
+        <section id="social" class="mb-20">
+
+            <h2 class="text-3xl font-bold text-center mb-8">
+                Social Media
+            </h2>
+
+            <div class="flex flex-wrap justify-center gap-4">
+
+                <a href="https://youtube.com"
+                    target="_blank"
+                    class="bg-red-500 text-white px-6 py-3 rounded-lg hover:scale-105 transition">
+                    YouTube
+                </a>
+
+                <a href="https://tiktok.com"
+                    target="_blank"
+                    class="bg-black text-white px-6 py-3 rounded-lg hover:scale-105 transition">
+                    TikTok
+                </a>
+
+                <a href="https://facebook.com"
+                    target="_blank"
+                    class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:scale-105 transition">
+                    Facebook
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="mb-20">
+
+            <h2 class="text-3xl font-bold text-center mb-8">
+                Contact Me
+            </h2>
+
+            <form class="bg-white rounded-2xl shadow-md p-8 max-w-xl mx-auto space-y-5">
+
+                <div>
+                    <label class="font-medium">Name</label>
+                    <input
+                        type="text"
+                        class="w-full mt-2 border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <div>
+                    <label class="font-medium">Email</label>
+                    <input
+                        type="email"
+                        class="w-full mt-2 border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <div>
+                    <label class="font-medium">Message</label>
+                    <textarea rows="5"
+                        class="w-full mt-2 border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                </div>
+
+                <button
+                    class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">
+                    Send Message
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white py-6 border-t">
+        <p class="text-center text-gray-500">
+            © 2026 Ibrahim. All Rights Reserved.
+        </p>
+    </footer>
+
+</body>
+</html>

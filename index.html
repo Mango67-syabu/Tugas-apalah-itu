@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,7 +16,9 @@
 
 
 <!-- HALAMAN MENU -->
+
 <section id="menu" class="min-h-screen flex items-center justify-center px-4">
+
 
 <div class="bg-white w-full max-w-xl rounded-3xl shadow-2xl p-8">
 
@@ -45,7 +48,9 @@ Form Social 2
 
 </div>
 
+
 </section>
+
 
 
 
@@ -65,9 +70,11 @@ Aduan Sosial
 
 
 
+
 <label class="block text-center font-semibold mb-2">
 Nama
 </label>
+
 
 <input
 type="text"
@@ -81,6 +88,7 @@ class="w-full text-center p-4 border rounded-xl mb-5">
 <label class="block text-center font-semibold mb-2">
 Judul Pengaduan
 </label>
+
 
 <input
 type="text"
@@ -106,6 +114,7 @@ class="w-full text-center p-4 border rounded-xl resize-none mb-5">
 
 
 
+
 <button
 class="w-full py-4 rounded-xl bg-blue-600 text-white text-lg font-semibold hover:scale-105 transition">
 
@@ -116,6 +125,7 @@ class="w-full py-4 rounded-xl bg-blue-600 text-white text-lg font-semibold hover
 
 
 
+
 <button onclick="kembali()"
 class="w-full mt-4 py-3 rounded-xl bg-gray-700 text-white">
 
@@ -124,8 +134,8 @@ Kembali
 </button>
 
 
-
 </div>
+
 
 </section>
 
@@ -135,7 +145,9 @@ Kembali
 
 
 
-<!-- FORM SOCIAL 2 -->
+
+
+<!-- FORM SOCIAL 2 / MENU MAKANAN -->
 
 <section id="form2" class="hidden min-h-screen flex items-center justify-center px-4">
 
@@ -143,93 +155,135 @@ Kembali
 <div class="bg-white w-full max-w-xl rounded-3xl shadow-2xl p-8">
 
 
-<h1 class="text-4xl font-bold text-center text-gray-800 mb-8">
-Pengaduan Sosial
+<h1 class="text-4xl font-bold text-center text-orange-600 mb-8">
+🍽 MENU
 </h1>
 
 
 
 
 
-<label class="block text-center font-semibold mb-2">
-Nama Pengadu
-</label>
-
-<input
-type="text"
-placeholder="Masukkan Nama Anda"
-class="w-full text-center p-4 border rounded-xl mb-5">
+<h2 class="text-xl font-bold text-center text-gray-700 mb-4">
+Makanan
+</h2>
 
 
 
+<div class="flex justify-between border-b py-3">
 
+<span class="font-semibold">
+Nasi Goreng
+</span>
 
-<label class="block text-center font-semibold mb-2">
-Kategori Pengaduan
-</label>
+<span class="text-orange-600 font-bold">
+Rp18.000
+</span>
 
-
-<select
-class="w-full text-center p-4 border rounded-xl mb-5">
-
-<option>Pilih Kategori</option>
-<option>Bullying</option>
-<option>Lingkungan</option>
-<option>Masyarakat</option>
-<option>Pelayanan Publik</option>
-<option>Lainnya</option>
-
-</select>
+</div>
 
 
 
 
+<div class="flex justify-between border-b py-3">
 
+<span class="font-semibold">
+Nasi Ruwet
+</span>
 
-<label class="block text-center font-semibold mb-2">
-Judul Pengaduan
-</label>
+<span class="text-orange-600 font-bold">
+Rp22.000
+</span>
 
-
-<input
-type="text"
-placeholder="Judul Pengaduan"
-class="w-full text-center p-4 border rounded-xl mb-5">
+</div>
 
 
 
 
 
+<div class="flex justify-between border-b py-3">
 
-<label class="block text-center font-semibold mb-2">
-Isi Pengaduan
-</label>
+<span class="font-semibold">
+Ayam Geprek
+</span>
 
+<span class="text-orange-600 font-bold">
+Rp15.000
+</span>
 
-<textarea
-rows="5"
-placeholder="Tuliskan Pengaduan Anda"
-class="w-full text-center p-4 border rounded-xl resize-none mb-5">
-</textarea>
+</div>
 
 
 
 
 
 
-<button
-class="w-full py-4 rounded-xl bg-red-600 text-white text-lg font-semibold hover:scale-105 transition">
 
-🚨 Kirim Pengaduan
+<h2 class="text-xl font-bold text-center text-gray-700 mt-8 mb-4">
+Minuman
+</h2>
 
-</button>
+
+
+
+<div class="flex justify-between border-b py-3">
+
+<span class="font-semibold">
+Es Teh
+</span>
+
+<span class="text-orange-600 font-bold">
+Rp5.000
+</span>
+
+</div>
+
+
+
+
+
+<div class="flex justify-between border-b py-3">
+
+<span class="font-semibold">
+Es Jeruk
+</span>
+
+<span class="text-orange-600 font-bold">
+Rp8.000
+</span>
+
+</div>
+
+
+
+
+
+<div class="flex justify-between py-3">
+
+<span class="font-semibold">
+Kopi Susu
+</span>
+
+<span class="text-orange-600 font-bold">
+Rp10.000
+</span>
+
+</div>
+
+
+
+
+
+
+<p class="text-center text-gray-500 mt-8">
+Selamat Menikmati ❤️
+</p>
 
 
 
 
 
 <button onclick="kembali()"
-class="w-full mt-4 py-3 rounded-xl bg-gray-700 text-white">
+class="w-full mt-6 py-3 rounded-xl bg-gray-700 text-white">
 
 Kembali
 
@@ -239,7 +293,9 @@ Kembali
 
 </div>
 
+
 </section>
+
 
 
 
@@ -260,6 +316,7 @@ document.getElementById("form1").classList.remove("hidden");
 
 
 
+
 function bukaForm2(){
 
 document.getElementById("menu").classList.add("hidden");
@@ -267,6 +324,7 @@ document.getElementById("menu").classList.add("hidden");
 document.getElementById("form2").classList.remove("hidden");
 
 }
+
 
 
 
@@ -279,6 +337,7 @@ document.getElementById("form1").classList.add("hidden");
 document.getElementById("form2").classList.add("hidden");
 
 }
+
 
 
 </script>

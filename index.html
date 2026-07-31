@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
-<title>Tugas Mingguan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<script src="https://cdn.tailwindcss.com"></script>
+    <title>Tugas Mingguan</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 
@@ -15,334 +18,832 @@
 <body class="bg-gradient-to-br from-blue-100 via-white to-blue-200">
 
 
-<!-- HALAMAN MENU -->
+<!-- ================================= -->
+<!-- HALAMAN UTAMA -->
+<!-- ================================= -->
 
-<section id="menu" class="min-h-screen flex items-center justify-center px-4">
+<section
+id="menu"
+class="min-h-screen flex items-center justify-center px-4">
 
+    <div
+    class="bg-white w-full max-w-xl rounded-3xl shadow-2xl p-8">
 
-<div class="bg-white w-full max-w-xl rounded-3xl shadow-2xl p-8">
+        <h1
+        class="text-4xl font-bold text-center text-gray-800 mb-8">
 
+            Tugas Mingguan
 
-<h1 class="text-4xl font-bold text-center text-gray-800 mb-8">
-Tugas Mingguan
-</h1>
-
-
-
-<button onclick="bukaForm1()"
-class="w-full py-4 mb-4 rounded-xl bg-black text-white text-lg hover:scale-105 transition">
-
-Form Social 
-
-</button>
+        </h1>
 
 
+        <!-- TOMBOL FORM 1 -->
 
-<button onclick="bukaForm2()"
-class="w-full py-4 rounded-xl bg-black text-white text-lg hover:scale-105 transition">
+        <button
+        onclick="bukaForm1()"
+        class="w-full py-4 mb-4 rounded-xl
+        bg-black text-white text-lg
+        hover:scale-105 transition duration-300">
 
-Menu
+            Form Social
 
-</button>
+        </button>
 
 
-</div>
+        <!-- TOMBOL FORM 2 -->
 
+        <button
+        onclick="bukaForm2()"
+        class="w-full py-4 mb-4 rounded-xl
+        bg-black text-white text-lg
+        hover:scale-105 transition duration-300">
+
+            Menu Makanan
+
+        </button>
+
+
+        <!-- TOMBOL FORM 3 -->
+
+        <button
+        onclick="bukaForm3()"
+        class="w-full py-4 rounded-xl
+        bg-black text-white text-lg
+        hover:scale-105 transition duration-300">
+
+            Bahan & Resep
+
+        </button>
+
+    </div>
 
 </section>
 
 
 
+<!-- ================================= -->
+<!-- FORM 1 -->
+<!-- ADUAN SOSIAL -->
+<!-- ================================= -->
+
+<section
+id="form1"
+class="hidden min-h-screen items-center justify-center px-4 py-8">
+
+    <div
+    class="bg-white w-full max-w-xl rounded-3xl shadow-2xl p-8">
+
+        <h1
+        class="text-4xl font-bold text-center text-gray-800 mb-8">
+
+            Aduan Sosial
+
+        </h1>
 
 
+        <!-- INPUT NAMA -->
 
-<!-- FORM SOCIAL 1 -->
+        <label
+        class="block text-center font-semibold text-gray-700 mb-2">
 
-<section id="form1" class="hidden min-h-screen flex items-center justify-center px-4">
+            Nama
 
-
-<div class="bg-white w-full max-w-xl rounded-3xl shadow-2xl p-8">
-
-
-<h1 class="text-4xl font-bold text-center text-gray-800 mb-8">
-Aduan Sosial
-</h1>
+        </label>
 
 
+        <input
+        id="nama"
+        type="text"
+        placeholder="Nama Anda"
+        class="w-full text-center p-4 border-2
+        border-gray-200 rounded-xl mb-5
+        outline-none focus:border-blue-500">
 
 
-<label class="block text-center font-semibold mb-2">
-Nama
-</label>
+        <!-- INPUT JUDUL -->
+
+        <label
+        class="block text-center font-semibold text-gray-700 mb-2">
+
+            Judul Pengaduan
+
+        </label>
 
 
-<input
-type="text"
-placeholder="Nama Anda"
-class="w-full text-center p-4 border rounded-xl mb-5">
+        <input
+        id="judul"
+        type="text"
+        placeholder="Judul Pengaduan Yang Ingin Anda Adukan"
+        class="w-full text-center p-4 border-2
+        border-gray-200 rounded-xl mb-5
+        outline-none focus:border-blue-500">
 
 
+        <!-- INPUT DESKRIPSI -->
+
+        <label
+        class="block text-center font-semibold text-gray-700 mb-2">
+
+            Deskripsi Pengaduan
+
+        </label>
 
 
-
-<label class="block text-center font-semibold mb-2">
-Judul Pengaduan
-</label>
-
-
-<input
-type="text"
-placeholder="Judul Pengaduan Yang Ingin Anda Adukan"
-class="w-full text-center p-4 border rounded-xl mb-5">
+        <textarea
+        id="deskripsi"
+        rows="5"
+        placeholder="Deskripsi Pengaduan"
+        class="w-full text-center p-4 border-2
+        border-gray-200 rounded-xl resize-none mb-5
+        outline-none focus:border-blue-500"></textarea>
 
 
+        <!-- TOMBOL KIRIM -->
+
+        <button
+        onclick="kirimPengaduan()"
+        class="w-full py-4 rounded-xl
+        bg-blue-600 text-white
+        text-lg font-semibold
+        hover:bg-blue-700
+        hover:scale-105
+        transition duration-300">
+
+            🚀 Kirim Pengaduan
+
+        </button>
 
 
+        <!-- TOMBOL KEMBALI -->
 
-<label class="block text-center font-semibold mb-2">
-Deskripsi Pengaduan
-</label>
+        <button
+        onclick="kembali()"
+        class="w-full mt-4 py-3 rounded-xl
+        bg-gray-700 text-white
+        hover:bg-gray-800 transition">
 
+            Kembali
 
-<textarea
-rows="5"
-placeholder="Deskripsi Pengaduan"
-class="w-full text-center p-4 border rounded-xl resize-none mb-5">
-</textarea>
+        </button>
 
-
-
-
-
-
-<button
-class="w-full py-4 rounded-xl bg-blue-600 text-white text-lg font-semibold hover:scale-105 transition">
-
-🚀 Kirim Pengaduan
-
-</button>
-
-
-
-
-
-<button onclick="kembali()"
-class="w-full mt-4 py-3 rounded-xl bg-gray-700 text-white">
-
-Kembali
-
-</button>
-
-
-</div>
-
+    </div>
 
 </section>
 
 
 
+<!-- ================================= -->
+<!-- FORM 2 -->
+<!-- MENU MAKANAN -->
+<!-- ================================= -->
 
+<section
+id="form2"
+class="hidden min-h-screen items-center justify-center px-4 py-8">
 
+    <div
+    class="bg-white w-full max-w-xl rounded-3xl shadow-2xl p-8">
 
+        <h1
+        class="text-4xl font-bold text-center text-orange-600 mb-8">
 
+            🍽 MENU
 
+        </h1>
 
-<!-- FORM SOCIAL 2 / MENU MAKANAN -->
 
-<section id="form2" class="hidden min-h-screen flex items-center justify-center px-4">
+        <!-- JUDUL MAKANAN -->
 
+        <h2
+        class="text-xl font-bold text-center text-gray-700 mb-4">
 
-<div class="bg-white w-full max-w-xl rounded-3xl shadow-2xl p-8">
+            Makanan
 
+        </h2>
 
-<h1 class="text-4xl font-bold text-center text-orange-600 mb-8">
-🍽 MENU
-</h1>
 
+        <!-- NASI GORENG -->
 
+        <div
+        class="flex justify-between border-b py-3">
 
+            <span class="font-semibold">
 
+                Nasi Goreng
 
-<h2 class="text-xl font-bold text-center text-gray-700 mb-4">
-Makanan
-</h2>
+            </span>
 
+            <span class="text-orange-600 font-bold">
 
+                Rp18.000
 
-<div class="flex justify-between border-b py-3">
+            </span>
 
-<span class="font-semibold">
-Nasi Goreng
-</span>
+        </div>
 
-<span class="text-orange-600 font-bold">
-Rp18.000
-</span>
 
-</div>
+        <!-- NASI RUWET -->
 
+        <div
+        class="flex justify-between border-b py-3">
 
+            <span class="font-semibold">
 
+                Nasi Ruwet
 
-<div class="flex justify-between border-b py-3">
+            </span>
 
-<span class="font-semibold">
-Nasi Ruwet
-</span>
+            <span class="text-orange-600 font-bold">
 
-<span class="text-orange-600 font-bold">
-Rp22.000
-</span>
+                Rp22.000
 
-</div>
+            </span>
 
+        </div>
 
 
+        <!-- AYAM GEPREK -->
 
+        <div
+        class="flex justify-between border-b py-3">
 
-<div class="flex justify-between border-b py-3">
+            <span class="font-semibold">
 
-<span class="font-semibold">
-Ayam Geprek
-</span>
+                Ayam Geprek
 
-<span class="text-orange-600 font-bold">
-Rp15.000
-</span>
+            </span>
 
-</div>
+            <span class="text-orange-600 font-bold">
 
+                Rp15.000
 
+            </span>
 
+        </div>
 
 
+        <!-- JUDUL MINUMAN -->
 
+        <h2
+        class="text-xl font-bold text-center
+        text-gray-700 mt-8 mb-4">
 
-<h2 class="text-xl font-bold text-center text-gray-700 mt-8 mb-4">
-Minuman
-</h2>
+            Minuman
 
+        </h2>
 
 
+        <!-- ES TEH -->
 
-<div class="flex justify-between border-b py-3">
+        <div
+        class="flex justify-between border-b py-3">
 
-<span class="font-semibold">
-Es Teh
-</span>
+            <span class="font-semibold">
 
-<span class="text-orange-600 font-bold">
-Rp5.000
-</span>
+                Es Teh
 
-</div>
+            </span>
 
+            <span class="text-orange-600 font-bold">
 
+                Rp5.000
 
+            </span>
 
+        </div>
 
-<div class="flex justify-between border-b py-3">
 
-<span class="font-semibold">
-Es Jeruk
-</span>
+        <!-- ES JERUK -->
 
-<span class="text-orange-600 font-bold">
-Rp8.000
-</span>
+        <div
+        class="flex justify-between border-b py-3">
 
-</div>
+            <span class="font-semibold">
 
+                Es Jeruk
 
+            </span>
 
+            <span class="text-orange-600 font-bold">
 
+                Rp8.000
 
-<div class="flex justify-between py-3">
+            </span>
 
-<span class="font-semibold">
-Kopi Susu
-</span>
+        </div>
 
-<span class="text-orange-600 font-bold">
-Rp10.000
-</span>
 
-</div>
+        <!-- KOPI SUSU -->
 
+        <div
+        class="flex justify-between py-3">
 
+            <span class="font-semibold">
 
+                Kopi Susu
 
+            </span>
 
+            <span class="text-orange-600 font-bold">
 
-<p class="text-center text-gray-500 mt-8">
-Selamat Menikmati ❤️
-</p>
+                Rp10.000
 
+            </span>
 
+        </div>
 
 
+        <p
+        class="text-center text-gray-500 mt-8">
 
-<button onclick="kembali()"
-class="w-full mt-6 py-3 rounded-xl bg-gray-700 text-white">
+            Selamat Menikmati ❤️
 
-Kembali
+        </p>
 
-</button>
 
+        <!-- TOMBOL KEMBALI -->
 
+        <button
+        onclick="kembali()"
+        class="w-full mt-6 py-3 rounded-xl
+        bg-gray-700 text-white
+        hover:bg-gray-800 transition">
 
-</div>
+            Kembali
 
+        </button>
+
+    </div>
 
 </section>
 
 
 
+<!-- ================================= -->
+<!-- FORM 3 -->
+<!-- BAHAN DAN RESEP -->
+<!-- ================================= -->
+
+<section
+id="form3"
+class="hidden min-h-screen items-center justify-center px-4 py-8">
+
+    <div
+    class="bg-white w-full max-w-6xl
+    rounded-3xl shadow-2xl p-8">
+
+        <h1
+        class="text-4xl font-bold text-center
+        text-gray-800 mb-10">
+
+            Bahan & Resep Makanan
+
+        </h1>
+
+
+        <!-- KARTU DAN RESEP -->
+
+        <div
+        class="grid grid-cols-1 md:grid-cols-2
+        gap-10 items-center">
+
+
+            <!-- KARTU NASI GORENG -->
+
+            <button
+            onclick="tampilResepNasiGoreng()"
+            class="border-2 border-gray-800
+            rounded-2xl p-8
+            hover:scale-105
+            hover:shadow-xl
+            transition duration-300">
+
+
+                <!-- GAMBAR -->
+
+                <div
+                class="w-40 h-40 mx-auto mb-6
+                border-4 border-gray-700
+                rounded-2xl overflow-hidden">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=500&q=80"
+                    alt="Nasi Goreng"
+                    class="w-full h-full object-cover">
+
+                </div>
+
+
+                <!-- NAMA MAKANAN -->
+
+                <h2
+                class="text-3xl font-bold
+                text-gray-800 mb-6">
+
+                    Nasi Goreng
+
+                </h2>
+
+
+                <!-- KETERANGAN -->
+
+                <p
+                class="text-gray-600 text-lg
+                leading-relaxed">
+
+                    Nasi goreng adalah makanan khas
+                    Indonesia yang dibuat dari nasi,
+                    bumbu, kecap, dan berbagai
+                    tambahan lainnya.
+
+                </p>
+
+
+                <p
+                class="mt-6 text-blue-600
+                font-bold">
+
+                    Klik gambar untuk melihat resep 👆
+
+                </p>
+
+            </button>
 
 
 
+            <!-- BAGIAN RESEP -->
 
+            <div
+            id="resep"
+            class="border-4 border-gray-800
+            rounded-3xl p-8 min-h-[430px]">
+
+
+                <h2
+                class="text-3xl font-bold
+                text-center text-gray-800 mb-6">
+
+                    Bahan & Resep Makanan
+
+                </h2>
+
+
+                <p
+                class="text-center
+                text-gray-500 text-lg">
+
+                    Klik kartu Nasi Goreng
+                    untuk melihat bahan
+                    dan cara membuatnya.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- TOMBOL KEMBALI -->
+
+        <button
+        onclick="kembali()"
+        class="w-full mt-10 py-4
+        rounded-xl bg-gray-700
+        text-white text-lg
+        hover:bg-gray-800
+        hover:scale-105
+        transition duration-300">
+
+            Kembali
+
+        </button>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================= -->
+<!-- JAVASCRIPT -->
+<!-- ================================= -->
 
 <script>
 
 
-function bukaForm1(){
+/* ============================== */
+/* MEMBUKA FORM 1 */
+/* ============================== */
 
-document.getElementById("menu").classList.add("hidden");
+function bukaForm1() {
 
-document.getElementById("form1").classList.remove("hidden");
+    document
+    .getElementById("menu")
+    .classList
+    .add("hidden");
+
+
+    document
+    .getElementById("form1")
+    .classList
+    .remove("hidden");
+
+
+    document
+    .getElementById("form1")
+    .classList
+    .add("flex");
+
+}
+
+
+
+/* ============================== */
+/* MEMBUKA FORM 2 */
+/* ============================== */
+
+function bukaForm2() {
+
+    document
+    .getElementById("menu")
+    .classList
+    .add("hidden");
+
+
+    document
+    .getElementById("form2")
+    .classList
+    .remove("hidden");
+
+
+    document
+    .getElementById("form2")
+    .classList
+    .add("flex");
 
 }
 
 
 
+/* ============================== */
+/* MEMBUKA FORM 3 */
+/* ============================== */
 
-function bukaForm2(){
+function bukaForm3() {
 
-document.getElementById("menu").classList.add("hidden");
+    document
+    .getElementById("menu")
+    .classList
+    .add("hidden");
 
-document.getElementById("form2").classList.remove("hidden");
+
+    document
+    .getElementById("form3")
+    .classList
+    .remove("hidden");
+
+
+    document
+    .getElementById("form3")
+    .classList
+    .add("flex");
 
 }
 
 
 
+/* ============================== */
+/* KEMBALI KE MENU */
+/* ============================== */
 
-function kembali(){
+function kembali() {
 
-document.getElementById("menu").classList.remove("hidden");
+    document
+    .getElementById("menu")
+    .classList
+    .remove("hidden");
 
-document.getElementById("form1").classList.add("hidden");
 
-document.getElementById("form2").classList.add("hidden");
+    document
+    .getElementById("form1")
+    .classList
+    .add("hidden");
+
+
+    document
+    .getElementById("form1")
+    .classList
+    .remove("flex");
+
+
+    document
+    .getElementById("form2")
+    .classList
+    .add("hidden");
+
+
+    document
+    .getElementById("form2")
+    .classList
+    .remove("flex");
+
+
+    document
+    .getElementById("form3")
+    .classList
+    .add("hidden");
+
+
+    document
+    .getElementById("form3")
+    .classList
+    .remove("flex");
 
 }
 
+
+
+/* ============================== */
+/* KIRIM PENGADUAN */
+/* ============================== */
+
+function kirimPengaduan() {
+
+    let nama = document
+    .getElementById("nama")
+    .value;
+
+
+    let judul = document
+    .getElementById("judul")
+    .value;
+
+
+    let deskripsi = document
+    .getElementById("deskripsi")
+    .value;
+
+
+    if (
+        nama === "" ||
+        judul === "" ||
+        deskripsi === ""
+    ) {
+
+        alert(
+        "Silakan isi semua data terlebih dahulu!"
+        );
+
+        return;
+
+    }
+
+
+    alert(
+    "Pengaduan berhasil dikirim! 🚀"
+    );
+
+
+    document
+    .getElementById("nama")
+    .value = "";
+
+
+    document
+    .getElementById("judul")
+    .value = "";
+
+
+    document
+    .getElementById("deskripsi")
+    .value = "";
+
+}
+
+
+
+/* ============================== */
+/* MENAMPILKAN RESEP */
+/* ============================== */
+
+function tampilResepNasiGoreng() {
+
+    document
+    .getElementById("resep")
+    .innerHTML = `
+
+        <h2
+        class="text-3xl font-bold
+        text-center text-orange-600
+        mb-6">
+
+            🍳 Nasi Goreng
+
+        </h2>
+
+
+        <h3
+        class="text-xl font-bold mb-3">
+
+            Bahan:
+
+        </h3>
+
+
+        <ul
+        class="list-disc ml-6
+        space-y-2 text-gray-700">
+
+            <li>
+            1 piring nasi putih
+            </li>
+
+            <li>
+            1 butir telur
+            </li>
+
+            <li>
+            2 siung bawang putih
+            </li>
+
+            <li>
+            2 siung bawang merah
+            </li>
+
+            <li>
+            1 sendok makan kecap manis
+            </li>
+
+            <li>
+            Garam secukupnya
+            </li>
+
+            <li>
+            Minyak goreng secukupnya
+            </li>
+
+        </ul>
+
+
+        <h3
+        class="text-xl font-bold
+        mt-6 mb-3">
+
+            Cara Membuat:
+
+        </h3>
+
+
+        <ol
+        class="list-decimal ml-6
+        space-y-2 text-gray-700">
+
+            <li>
+            Panaskan minyak
+            di dalam wajan.
+            </li>
+
+            <li>
+            Tumis bawang merah
+            dan bawang putih.
+            </li>
+
+            <li>
+            Masukkan telur,
+            lalu aduk hingga matang.
+            </li>
+
+            <li>
+            Masukkan nasi putih.
+            </li>
+
+            <li>
+            Tambahkan kecap
+            dan garam.
+            </li>
+
+            <li>
+            Aduk hingga semua
+            bahan tercampur.
+            </li>
+
+            <li>
+            Masak hingga matang,
+            lalu sajikan.
+            </li>
+
+        </ol>
+
+    `;
+
+}
 
 
 </script>
 
 
-
 </body>
+
 </html>
